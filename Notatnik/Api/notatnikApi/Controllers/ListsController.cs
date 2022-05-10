@@ -89,33 +89,6 @@ namespace notatnikApi.Controllers
             }
         }
 
-        [HttpDelete]
-        public void DeleteList(int id)
-        {
-
-            MySqlConnection connection = new MySqlConnection(connectionString);
-
-            try
-            {
-                connection.Open();
-
-                Console.WriteLine("connection open");
-                MySqlCommand cmd = new MySqlCommand("DELETE FROM lists WHERE id=@id;", connection);
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.CommandType = CommandType.Text;
-                MySqlDataReader reader = cmd.ExecuteReader();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                if (connection.State == System.Data.ConnectionState.Open)
-                {
-                    connection.Close();
-                }
-            }
-        }
+        
     }
 }

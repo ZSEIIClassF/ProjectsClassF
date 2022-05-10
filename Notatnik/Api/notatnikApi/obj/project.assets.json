@@ -1056,11 +1056,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\programowanie\\ProjectsClassF\\Notatnik\\notatnikApi\\notatnikApi\\notatnikApi.csproj",
+      "projectUniqueName": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\Api\\notatnikApi\\notatnikApi.csproj",
       "projectName": "notatnikApi",
-      "projectPath": "E:\\programowanie\\ProjectsClassF\\Notatnik\\notatnikApi\\notatnikApi\\notatnikApi.csproj",
+      "projectPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\Api\\notatnikApi\\notatnikApi.csproj",
       "packagesPath": "C:\\Users\\eleme\\.nuget\\packages\\",
-      "outputPath": "E:\\programowanie\\ProjectsClassF\\Notatnik\\notatnikApi\\notatnikApi\\obj\\",
+      "outputPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\Api\\notatnikApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

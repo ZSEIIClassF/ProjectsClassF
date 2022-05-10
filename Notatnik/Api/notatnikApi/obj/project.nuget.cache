@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MKnkbrWGNwxDg93wW6SWt8Ekxdou5BT3z9Ejpk1VtKsjwN9wvgUWxK69jtnAHa9XR2mB4NMumQoL+e8nMbByuw==",
+  "dgSpecHash": "31mHsNpMEJ1XhsSunAFSJKucKcNzFU3Te0bctyeYwH6sKSyV6nII9VDRG+IuJl5ukxRFPSI4m4gmrLxooog+vg==",
   "success": true,
-  "projectFilePath": "E:\\programowanie\\ProjectsClassF\\Notatnik\\notatnikApi\\notatnikApi\\notatnikApi.csproj",
+  "projectFilePath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\Api\\notatnikApi\\notatnikApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eleme\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\eleme\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
