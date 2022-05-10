@@ -1,0 +1,567 @@
+:root {
+    --black: #191919;
+    
+    --blue: #34495e;
+    --lightBlue: #3498bd;
+    
+    --white: aliceblue;
+    --grey: grey;
+    
+    --red: #fc494f;
+    --darkRed: #af3035;
+    
+    --green: #2ecc71;
+    --darkGreen: #03612b;
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+body
+{
+    background-image: url(img/bg.png);
+    background-color: var(--blue);
+}
+
+
+/* --- LINKS --- */
+
+a, a:visited
+{
+    color: var(--green);
+}
+
+a:hover
+{
+    color: var(--darkGreen);
+}
+
+
+/* --- ALERT --- */
+
+.alert
+{
+    background-color: var(--red);
+    color: var(--darkRed);
+    
+    height: 55px;
+    width: 400px;
+    
+    border: 8px solid var(--darkRed);
+    border-radius: 10px;
+    
+    text-align: center;
+    line-height: 55px;
+    font-weight: bold;
+    
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 10%;
+    
+    z-index: 10;
+}
+
+.hide
+{
+    display: none;
+}
+
+
+.hide.active
+{
+    display: block;
+    animation-name: alertShow;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes alertShow
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    30%
+    {
+        transform: translateY(10%);
+    }
+    50%
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    80%
+    {
+        opacity: 1;
+        transform: translateY(10%);
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    
+    
+}
+
+
+
+/* ---  HEADER --- */
+
+header
+{
+    background-image: url(img/bg-light.png);
+    background-color: var(--black);
+    
+    width: 100%;
+    height: 100px;
+    
+    position: static;
+    
+}
+
+
+header > div
+{
+    text-align: center;
+}
+
+header > div > a
+{
+    text-decoration: none;
+}
+
+
+header > div  > a > img
+{
+    width: 64px;
+    top: 20px;
+    
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+
+header > div > a > h1
+{
+    color: white;
+    
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 25px;
+    
+    text-align: center;
+    display: inline-block;
+}
+
+
+header > a > img
+{
+    width: 30px;
+    right: 40px;
+    top: 35px;
+    
+    position: absolute;
+    
+    transform: scale(1);
+    transition-duration: 1s;
+}
+
+header > a > img:hover
+{
+    cursor: pointer;
+    
+    transform: scale(1.4);
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+}
+
+
+
+
+
+
+
+/* --- FOOTER ---*/
+
+
+
+
+footer
+{
+    background-image: url(img/bg-light.png);
+    background-color: var(--black);
+    color: var(--white);
+    
+    width: 100%;
+    height: 70px;
+    
+    line-height: 70px;
+    text-align: center;
+    
+    font-size: 20px;
+}
+
+footer > a:last-child
+{
+    width: 30px;
+    height: 30px;
+    
+    
+    float:left;
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+
+
+footer > a:last-child > img
+{
+    width: 30px;
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* ---  MAIN BOX --- */
+
+
+
+
+section
+{
+    background-image: url(img/bg.png);
+    background-color: var(--blue);
+    
+    width: 80%;
+    min-height: 100vh;
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    flex-direction:row;
+    justify-content: center;
+    
+    box-shadow: 0px 10px 10px #1F1F1F;
+}
+
+
+
+.column
+{
+    margin-top: 35px;
+
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+/* --- LISTS --- */
+
+
+
+.list
+{
+    background-color: var(--black);
+    color: var(--white);
+    
+    border-radius: 25px;
+    box-shadow: 5px 5px 30px #2E2E2E;
+    
+    min-width: 300px;
+    max-width: 300px;
+    
+    margin-top: 35px;
+    padding: 25px;
+    
+    display: block;
+}
+
+.list:not(:first-child)
+{
+    margin-top: 30px;
+}
+
+
+.list > div:first-child
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.list > div:first-child > h2
+{
+    text-decoration: underline;
+    max-width: 250px;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+
+.list > div > i
+{
+    margin-top: 15px;
+    color: var(--grey);
+}
+
+.list > div > i:hover
+{
+    cursor: pointer;
+    color: var(--white);
+}
+
+
+/* --- LIST NEW BUTTON --- */
+
+
+.newList
+{
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    color: var(--black);
+}
+
+
+
+
+/* --- TASKS ---*/
+
+
+
+.task
+{
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid #424242;
+    vertical-align:middle;
+}
+
+.task:last-child {
+    border-bottom: 0px;
+}
+
+
+.task:hover
+{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.task > p
+{
+    width: 207px;
+    
+    margin: 0;
+    margin-left: 20px;
+    padding: 20px;
+    
+    text-align: center;
+    
+    flex: 1;
+    
+    border-left: 1px solid #424242;
+    
+    transition: background 0.2s;
+}
+
+
+input::after
+{
+    background: var(--black);
+    color: var(--white);
+    
+    border: 2px solid var(--white);
+    border-radius: 3px;
+    
+    width: 18px;
+    height: 18px;
+
+    content: '';
+    
+    display: inline-block;
+    
+    transition: background 0.15s, border-color 0.15s;
+}
+
+
+input:checked:after
+{
+    content: '\2714';
+    text-align: center;
+}
+
+.task > input:hover
+{
+    cursor: pointer;
+}
+
+.task > input:checked + p
+{
+    background: #262626;
+    text-decoration: line-through;
+}
+
+.task > input:hover + .task > p
+{
+    background-color: #262626;
+}
+
+
+/* --- INFO ---*/
+
+
+.infoBox
+{
+    background-color: var(--black);
+    color: var(--white);
+    
+    width: 700px;
+    
+    border-radius: 25px;
+    
+    font-size: 20px;
+    text-align: center;
+    
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+
+
+/* --- LOGIN / REGISTER --- */
+
+
+
+form
+{
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form > div
+{
+    background-color: var(--black);
+    color: var(--white);
+    
+    width: 400px;
+    
+    padding: 40px;
+    text-align: center;
+    
+    border-radius: 25px;
+}
+
+
+form > div > input[type = "email"], input[type = "password"], input[type = "text"]
+{
+    background: none;
+    color: white;
+    outline: none;
+    
+    display: block;
+    
+    width: 200px;
+    
+    margin: 20px auto;
+    padding: 14px 10px;
+    
+    text-align: center;
+    
+    border: 2px solid var(--lightBlue);
+    border-radius: 24px;
+    
+    transition: 0.25s;
+}
+
+form > div > input[type = "email"]:focus, input[type = "password"]:focus, input[type = "text"]:focus
+{
+    width: 280px;
+    border-color: var(--green);
+}
+
+
+
+form > div > input[type = "submit"] 
+{
+    
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--green);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+form > div > input[type = "submit"]:hover 
+{
+    background: var(--green);
+}
+
+form > div > input[type = "checkbox"]
+{
+    margin-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

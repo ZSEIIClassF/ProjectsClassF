@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "3uyNAsLXcrbK826/89EoYrzBTo0cpIkRe2V24XdeQj0A7dx9uUlWkABD/C90udkFgG2s11Z5m0Le4J9n8TW9tg==",
+  "success": true,
+  "projectFilePath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eleme\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\eleme\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\eleme\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
