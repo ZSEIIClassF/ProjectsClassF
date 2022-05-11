@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj": {}
+    "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj": {}
   },
   "projects": {
-    "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj": {
+    "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj",
+        "projectUniqueName": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj",
         "projectName": "NotatnikApp.iOS",
-        "projectPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj",
+        "projectPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj",
         "packagesPath": "C:\\Users\\eleme\\.nuget\\packages\\",
-        "outputPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.iOS\\obj\\",
+        "outputPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
-                "projectPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj"
+              "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
+                "projectPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.8, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -65,14 +69,14 @@
         }
       }
     },
-    "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
+    "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
+        "projectUniqueName": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
         "projectName": "NotatnikApp",
-        "projectPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
+        "projectPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
         "packagesPath": "C:\\Users\\eleme\\.nuget\\packages\\",
-        "outputPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\obj\\",
+        "outputPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

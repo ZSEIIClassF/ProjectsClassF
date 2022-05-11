@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DblS6TTIDGrgHnv+7HbGkTxbCgWXPPmvxe2Zg2OVSDTHxdS7Pqo7jue45NypIAdgmMRbyg5zsXGqncSgEqrauw==",
+  "dgSpecHash": "ORArj5TpE4/AKQLWYj4HZGLVMznF0mT5tXZzba4jKWEyUIUUw+YGOWDBesTn9qqOhdGzv33DkOP2w6r2WZAu9A==",
   "success": true,
-  "projectFilePath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
+  "projectFilePath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eleme\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\eleme\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

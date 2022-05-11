@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {}
+    "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {}
   },
   "projects": {
-    "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
+    "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
+        "projectUniqueName": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
         "projectName": "NotatnikApp",
-        "projectPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
+        "projectPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
         "packagesPath": "C:\\Users\\eleme\\.nuget\\packages\\",
-        "outputPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\obj\\",
+        "outputPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

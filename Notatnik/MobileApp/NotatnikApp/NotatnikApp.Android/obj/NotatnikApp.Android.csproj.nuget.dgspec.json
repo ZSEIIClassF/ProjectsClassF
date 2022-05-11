@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj": {}
+    "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj": {}
   },
   "projects": {
-    "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj": {
+    "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj",
+        "projectUniqueName": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj",
         "projectName": "NotatnikApp.Android",
-        "projectPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj",
+        "projectPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj",
         "packagesPath": "C:\\Users\\eleme\\.nuget\\packages\\",
-        "outputPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.Android\\obj\\",
+        "outputPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
-                "projectPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj"
+              "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
+                "projectPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "monoandroid12.0": {
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.8, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -54,14 +58,14 @@
         }
       }
     },
-    "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
+    "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
+        "projectUniqueName": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
         "projectName": "NotatnikApp",
-        "projectPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
+        "projectPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\NotatnikApp.csproj",
         "packagesPath": "C:\\Users\\eleme\\.nuget\\packages\\",
-        "outputPath": "E:\\programowanie\\C#\\Mobile\\NotatnikApp\\NotatnikApp\\NotatnikApp\\NotatnikApp\\obj\\",
+        "outputPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
