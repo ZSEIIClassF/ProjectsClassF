@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rFw9Wbb+ibGgumCrG/ljyUeFcZQI4ZkUxalEY8MAR9RuBTKEiJdcuRWl+K9cvlmLd/SoE/Q99uaAezjL36IEqg==",
+  "dgSpecHash": "adZL0eYdOgjGlYxlm93mXvpJMdnc7TnuI5YMrQpvFtrnu/KUGsIRs5EUNMmMIRLCChXER+UUCFkAPlWhaJ6Aiw==",
   "success": true,
   "projectFilePath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.iOS\\NotatnikApp.iOS.csproj",
   "expectedPackageFiles": [
@@ -62,5 +62,12 @@
     "C:\\Users\\eleme\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\eleme\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.iOS\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

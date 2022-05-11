@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotatnikApp.Views.RegisterPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Register PAGE"/>
+            <Entry Placeholder="email" Text="{Binding email, Mode=TwoWay}" />
+            <Entry Placeholder="username" Text="{Binding user, Mode=TwoWay}" />
+            <Entry Placeholder="password" Text="{Binding password, Mode=TwoWay}" />
+            <Entry Placeholder="confirm password" Text="{Binding Confirmpassword, Mode=TwoWay}" />
+            <Label Text="by pressing Register you accept our privacy and policy"/>
+            <Button Text="Register" Command="{Binding Register}"/>
+            <Button Text="Login" Command="{Binding Login}"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+</ContentPage>

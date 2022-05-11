@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("NotatnikApp.Views.LoginPage.xaml", "Views/LoginPage.xaml", typeof(global::NotatnikApp.Views.LoginPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("NotatnikApp.Views.LoginPage.xaml", "Views/LoginPage.xaml", typeof(global::ToDoApp.Views.LoginPage))]
 
-namespace NotatnikApp.Views {
+namespace ToDoApp.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\LoginPage.xaml")]
