@@ -12,7 +12,7 @@ namespace notatnikApi.Controllers
         string connectionString = "server=mysql4.webio.pl;database=22041_notatnik;uid=22041_admin;password=Z0h7N9klZa1[P];";
 
         [HttpGet]
-        public UserData GetUserData(string userName)
+        public UserData GetUserData(string email)
         {
             UserData userData = new UserData();
 
@@ -23,17 +23,17 @@ namespace notatnikApi.Controllers
                 connection.Open();
 
                 Console.WriteLine("connection open");
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM users WHERE user=@user;", connection);
-                cmd.Parameters.AddWithValue("@user", userName);
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM users WHERE email=@user;", connection);
+                cmd.Parameters.AddWithValue("@user", email);
                 cmd.CommandType = CommandType.Text;
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
                     userData.id = reader.GetInt32(0);
-                    userData.user = userName;
+                    userData.user = reader.GetString(1);
                     userData.pass = reader.GetString(2);
-                    userData.email = reader.GetString(3);
+                    userData.email = email;
                 }
 
 
