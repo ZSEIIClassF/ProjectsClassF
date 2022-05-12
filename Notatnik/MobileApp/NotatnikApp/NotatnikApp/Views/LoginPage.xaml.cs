@@ -17,10 +17,5 @@ namespace ToDoApp.Views
             InitializeComponent();
             BindingContext = new LoginViewModel();
         }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

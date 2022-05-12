@@ -27,9 +27,7 @@ namespace NotatnikApp.ViewModels
 
         private void GoToRegister()
         {
-
             Application.Current.MainPage.Navigation.PushModalAsync(new RegisterPage());
-
         }
 
         private async Task OnLogin()

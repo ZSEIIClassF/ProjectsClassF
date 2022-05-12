@@ -117,12 +117,5 @@
     "C:\\Users\\eleme\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\eleme\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.Android\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

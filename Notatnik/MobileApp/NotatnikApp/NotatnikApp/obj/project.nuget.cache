@@ -56,12 +56,5 @@
     "C:\\Users\\eleme\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\eleme\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
