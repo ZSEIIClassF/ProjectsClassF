@@ -27,7 +27,12 @@ namespace NotatnikApp.ViewModels
 
         private void GoToRegister()
         {
+<<<<<<< Updated upstream
             Application.Current.MainPage.Navigation.PushModalAsync(new RegisterPage());
+=======
+            Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new RegisterPage());
+            //Application.Current.MainPage = new NavigationPage(new RegisterPage());
+>>>>>>> Stashed changes
         }
 
         private async Task OnLogin()

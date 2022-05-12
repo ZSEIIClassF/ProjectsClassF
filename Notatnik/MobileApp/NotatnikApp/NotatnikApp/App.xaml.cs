@@ -20,11 +20,11 @@ namespace NotatnikApp
         {
             if (Preferences.Get("User", 0) == 0)
             {
-                MainPage = new LoginPage();
+                MainPage = new NavigationPage(new LoginPage());
             }
             else
             {
-                MainPage = new AppShell();
+                MainPage = new NavigationPage(new AppShell());
             }
         }
 
