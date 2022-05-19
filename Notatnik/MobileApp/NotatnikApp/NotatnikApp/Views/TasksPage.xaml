@@ -12,7 +12,7 @@
             <CollectionView x:Name="Tasks" ItemsSource="{Binding Tasks}" >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="1">
+                        <StackLayout Padding="1" FlowDirection="LeftToRight">
 
                             <CheckBox IsChecked="{Binding done}" CheckedChanged="OnCheckBoxCheckedChanged"/>
 
