@@ -25,6 +25,7 @@
 body {
     background-image: url(img/bg.png);
     background-color: var(--blue);
+    background-attachment: fixed;
 }
 
 
