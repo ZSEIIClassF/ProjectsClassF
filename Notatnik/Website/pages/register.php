@@ -53,7 +53,7 @@ if (isset($_POST['email']))
     $_SESSION['fr_user'] = $user;
     $_SESSION['fr_email'] = $email;
     $_SESSION['fr_haslo1'] = $haslo1;
-    if(isset($_POST['myCheckboxName'])) $_SESSION['fr_regulamin'] = true;
+    if(isset($_POST['accept'])) $_SESSION['fr_regulamin'] = true;
     
     // Łączenie z bazą danych w cellu sprawdzenia unikatowości danych
     
@@ -94,8 +94,6 @@ if (isset($_POST['email']))
                     throw new Exception($polaczenie->error);
                 }
                 
-                
-                // Do zrobienia - przekierowanie do login.php oraz ALERT zielony o logowaniu.
             }
             
             
