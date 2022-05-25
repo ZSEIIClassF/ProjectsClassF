@@ -76,7 +76,7 @@ namespace NotatnikApp.ViewModels
             if (response.IsSuccessStatusCode)
             {
                 UserData userData = await response.Content.ReadAsAsync<UserData>();
-                if (userData.pass == null)
+                if (userData.email == null)
                 {
                     return false;
                 }
