@@ -36,6 +36,14 @@
     <meta charset="UTF-8">
     <title>Notatnik logowanie</title>
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .alert{
+            background-color: #2dd670;
+            color: #c5f3d7;
+            border: 8px solid #c5f3d7;
+        }
+    </style>
 </head>
 <body>
 
@@ -48,7 +56,36 @@
         </div>
     </header>
     
+    <div class="alert hide" id="alert">
+        SUKCES! POMYŚLENIE ZAREJESTROWANO!
+    </div>
     
+    <script>
+        <?php
+            echo "var alertL = '$alert';";  
+        ?>
+
+        if (alertL == true) {
+            ShowAlert();
+        }
+
+        function ShowAlert() {
+            var element = document.getElementById("alert");
+            if (!element.classList.contains("active")) {
+                element.classList.add("active");
+                HideAlert();
+            }
+        }
+
+        function HideAlert() {
+            setTimeout(function () {
+                var element = document.getElementById("alert");
+                element.classList.remove("active");
+
+            }, 2800);
+        }
+    </script>
+
     <form action="zaloguj.php" method="post">
 
         <div>
