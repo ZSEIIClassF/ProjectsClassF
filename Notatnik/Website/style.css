@@ -7,8 +7,9 @@
     --white: aliceblue;
     --grey: grey;
 
-    --red: #fc494f;
+    --red: #fc4a50;
     --darkRed: #af3035;
+    --redError: #FF4440;
 
     --green: #2ecc71;
     --darkGreen: #03612b;
@@ -505,4 +506,11 @@ form>div>input[type="submit"]:hover {
 
 form>div>input[type="checkbox"] {
     margin-right: 15px;
+}
+
+.error {
+    color: var(--redError);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
