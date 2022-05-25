@@ -36,14 +36,6 @@
     <meta charset="UTF-8">
     <title>Notatnik logowanie</title>
     <link rel="stylesheet" href="../style.css">
-
-    <style>
-        .alert{
-            background-color: #2dd670;
-            color: #c5f3d7;
-            border: 8px solid #c5f3d7;
-        }
-    </style>
 </head>
 <body>
 
@@ -56,7 +48,7 @@
         </div>
     </header>
     
-    <div class="alert hide" id="alert">
+    <div class="alert green hide" id="alert">
         SUKCES! POMYŚLENIE ZAREJESTROWANO!
     </div>
     

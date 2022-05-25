@@ -20,6 +20,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+
 }
 
 
@@ -66,6 +67,12 @@ a:hover {
     top: 10%;
 
     z-index: 10;
+}
+
+.alert.green {
+    background-color: #2dd670;
+    color: #c5f3d7;
+    border: 8px solid #c5f3d7;
 }
 
 .hide {
