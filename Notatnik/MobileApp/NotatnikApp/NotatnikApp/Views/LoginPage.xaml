@@ -2,16 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDoApp.Views.LoginPage"
-             BackgroundColor="AliceBlue">
+             BackgroundColor="{DynamicResource blue}">
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="LOGIN PAGE"/>
+        <StackLayout Margin="15">
+            <Label Text="LOGIN PAGE" HorizontalOptions="CenterAndExpand" Margin="10" FontSize="15" FontAttributes="Bold"/>
             <Entry Placeholder="email" Text="{Binding email, Mode=TwoWay}" />
-            <Entry Placeholder="password" Text="{Binding password, Mode=TwoWay}" />
-            <Button Text="Login" Command="{Binding Login}"/>
+            <Entry Placeholder="password" Text="{Binding password, Mode=TwoWay}" IsPassword="true"/>
+            <Button Text="Login" Command="{Binding Login}" Style="{StaticResource button}"/>
 
-            <Button Text="Register" VerticalOptions="End" Command="{Binding Register}"/>
+            <Button Text="Register" VerticalOptions="End" Command="{Binding Register}" Style="{StaticResource button}"/>
         </StackLayout>
     </ContentPage.Content>
     

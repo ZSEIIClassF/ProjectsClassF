@@ -55,6 +55,26 @@
                 </Setter>
             </Style>
 
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource black}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource black}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
             <!--
             Custom Style you can apply to any Flyout Item
             -->
@@ -82,30 +102,28 @@
 
     <Shell.FlyoutContent>
 
-        <StackLayout BackgroundColor="#0D0D0D">
-            <Label Text="HI EFOX" TextColor="White" FontSize="50" />
-            <Button Text="Add" Command="{Binding newListPage}" />
-            <CollectionView x:Name="Lists" ItemsSource="{Binding Lists}" >
+        <StackLayout BackgroundColor="{DynamicResource blue}">
+            <StackLayout Orientation="Horizontal" BackgroundColor="#0D0D0D" Margin="0">
+                <Label Text="HI EFOX" TextColor="White" FontSize="40"  WidthRequest="250" VerticalOptions="CenterAndExpand" Margin="10"/>
+                <Button Text="Add" Command="{Binding newListPage}" WidthRequest="60" HeightRequest="20" HorizontalOptions="End" BackgroundColor="{DynamicResource mediumBlue}" Margin="10"/>
+            </StackLayout>
+            <CollectionView x:Name="Lists" ItemsSource="{Binding Lists}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="1" x:DataType="model:ListData">
-                            <Label Text="{Binding name}" 
-                                    FontSize="13" 
-                                    TextColor="White" 
-                                    BackgroundColor="#0D0D0D">
+                        <StackLayout Padding="1" x:DataType="model:ListData" Orientation="Horizontal" BackgroundColor="{DynamicResource mediumBlue}">
+                            <Label Text="{Binding name}" Style="{StaticResource Name}" Margin="10">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer
-                                        NumberOfTapsRequired="1"
-                                        Command="{Binding Source={x:Reference Name=Lists}, Path=BindingContext.openList}" CommandParameter="{Binding .}" />
+                                            NumberOfTapsRequired="1"
+                                            Command="{Binding Source={x:Reference Name=Lists}, Path=BindingContext.openList}" CommandParameter="{Binding .}" />
                                 </Label.GestureRecognizers>
                             </Label>
-                            <Button Text="Delete" Clicked="Button_Clicked"/>
+                            <ImageButton Source="delete.png"  Clicked="Button_Clicked" Style="{StaticResource imageButton}"/>
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
-            <Button Text="Logout" Command="{Binding Logout}"/>
+            <Button Text="Logout" Command="{Binding Logout}" Style="{StaticResource button}" TextColor="{DynamicResource white}" HeightRequest="40" FontAttributes="Bold" Padding="0" FontSize="15"/>
         </StackLayout>
     </Shell.FlyoutContent>
 

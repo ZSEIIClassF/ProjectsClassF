@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NotatnikApp.Views.RegisterPage">
+             x:Class="NotatnikApp.Views.RegisterPage"
+             BackgroundColor="{DynamicResource blue}">
 
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Register PAGE"/>
+        <StackLayout Margin="15">
+            <Label Text="REGISTER PAGE" HorizontalOptions="CenterAndExpand" Margin="10" FontSize="15" FontAttributes="Bold"/>
             <Entry Placeholder="email" Text="{Binding email, Mode=TwoWay}" />
             <Entry Placeholder="username" Text="{Binding user, Mode=TwoWay}" />
-            <Entry Placeholder="password" Text="{Binding password, Mode=TwoWay}" />
-            <Entry Placeholder="confirm password" Text="{Binding Confirmpassword, Mode=TwoWay}" />
-            <Label Text="by pressing Register you accept our privacy and policy"/>
-            <Button Text="Register" Command="{Binding Register}"/>
-            <Button Text="Login" Command="{Binding Login}"/>
+            <Entry Placeholder="password" Text="{Binding password, Mode=TwoWay}" IsPassword="true"/>
+            <Entry Placeholder="confirm password" Text="{Binding Confirmpassword, Mode=TwoWay}" IsPassword="true"/>
+            <Label Text="by pressing Register you accept our privacy and policy" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Register" Command="{Binding Register}" Style="{StaticResource button}"/>
+            <Button Text="Login" Command="{Binding Login}" Style="{StaticResource button}"/>
         </StackLayout>
     </ContentPage.Content>
     

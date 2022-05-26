@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NotatnikApp.Views.NewListPage">
+             x:Class="NotatnikApp.Views.NewListPage"
+             BackgroundColor="{DynamicResource blue}">
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="List Name"
-                HorizontalOptions="CenterAndExpand" />
-            <Entry Placeholder="np. wyjść z psem" Text="{Binding Name, Mode=TwoWay}"/>
-            <Button Text="Add" Command="{Binding addList}"/>
+        <StackLayout Margin="15">
+            <Entry Placeholder="np. zadania domowe" Text="{Binding Name, Mode=TwoWay}"/>
+            <Button Text="Add" Command="{Binding addList}" Style="{StaticResource button}"/>
         </StackLayout>
     </ContentPage.Content>
     

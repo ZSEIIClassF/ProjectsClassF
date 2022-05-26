@@ -62,9 +62,6 @@ E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\
 E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\res\mipmap-xxhdpi\launcher_foreground.png
 E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon.png
 E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\res\mipmap-xxxhdpi\launcher_foreground.png
-E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\res\drawable\xamarin_logo.png
-E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\res\drawable\icon_about.png
-E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\res\drawable\icon_feed.png
 E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\uploadflags.txt
 E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\resolvedassemblies.hash
 E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\android\assets\FormsViewGroup.dll
@@ -1320,3 +1317,4 @@ E:\backup\ProjectsClassF-7b1f5606ddaeedd818dc78f8025ab98a82ef429a\Notatnik\Mobil
 E:\backup\ProjectsClassF-7b1f5606ddaeedd818dc78f8025ab98a82ef429a\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 E:\backup\ProjectsClassF-7b1f5606ddaeedd818dc78f8025ab98a82ef429a\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 E:\backup\ProjectsClassF-7b1f5606ddaeedd818dc78f8025ab98a82ef429a\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+E:\Coding\ProjectsClassF-git\Notatnik\MobileApp\NotatnikApp\NotatnikApp.Android\obj\Debug\120\res\drawable\delete.png

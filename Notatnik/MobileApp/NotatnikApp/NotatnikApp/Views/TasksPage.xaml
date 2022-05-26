@@ -1,28 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NotatnikApp.Views.TasksPage">
-    
+             x:Class="NotatnikApp.Views.TasksPage"
+             BackgroundColor="{DynamicResource blue}">
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding Add}" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#0D0D0D">
+        <StackLayout>
             <CollectionView x:Name="Tasks" ItemsSource="{Binding Tasks}" >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="1" FlowDirection="LeftToRight">
-
-                            <CheckBox IsChecked="{Binding done}" CheckedChanged="OnCheckBoxCheckedChanged"/>
-
-                            <Label Text="{Binding name}" 
-                                    FontSize="13" 
-                                    TextColor="White" 
-                                    BackgroundColor="#0D0D0D"
-                                   FlowDirection="LeftToRight">
-                            </Label>
-                            <Button Text="Delete" Clicked="Button_Clicked"/>
+                        <StackLayout Margin="3" FlowDirection="LeftToRight" Orientation="Horizontal">
+                            
+                            <CheckBox IsChecked="{Binding done}" CheckedChanged="OnCheckBoxCheckedChanged" Style="{StaticResource Checkbox}"/>
+                            <Label Text="{Binding name}" Style="{StaticResource Name}"/>
+                            <ImageButton Source="delete.png"  Clicked="Button_Clicked" Style="{StaticResource imageButton}"/>
+                            
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
