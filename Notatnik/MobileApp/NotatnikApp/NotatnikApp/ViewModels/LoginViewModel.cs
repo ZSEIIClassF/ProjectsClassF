@@ -19,6 +19,21 @@ namespace NotatnikApp.ViewModels
         public Command Login { get; }
         public Command Register { get; }
 
+        private string error;
+        public string Error
+        {
+            get
+            {
+                return error;
+            }
+            set
+            {
+                error = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         public LoginViewModel()
         {
             Login = new Command(async () => await OnLogin());
@@ -49,11 +64,12 @@ namespace NotatnikApp.ViewModels
                 else
                 {
                     //wrong pass
+                    Error = "wrong data";
                 }
             }
             else
             {
-                //no user found
+                Error = "wrong data";
             }
         }
     }

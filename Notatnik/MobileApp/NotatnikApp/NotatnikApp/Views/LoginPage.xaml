@@ -10,8 +10,8 @@
             <Entry Placeholder="email" Text="{Binding email, Mode=TwoWay}" />
             <Entry Placeholder="password" Text="{Binding password, Mode=TwoWay}" IsPassword="true"/>
             <Button Text="Login" Command="{Binding Login}" Style="{StaticResource button}"/>
-
             <Button Text="Register" VerticalOptions="End" Command="{Binding Register}" Style="{StaticResource button}"/>
+            <Label Text="{Binding Error}" FontSize="20" HorizontalOptions="CenterAndExpand" TextColor="red"/>
         </StackLayout>
     </ContentPage.Content>
     

@@ -35,8 +35,6 @@ namespace notatnikApi.Controllers
                     userData.pass = reader.GetString(2);
                     userData.email = email;
                 }
-
-
             }
             catch (Exception ex)
             {

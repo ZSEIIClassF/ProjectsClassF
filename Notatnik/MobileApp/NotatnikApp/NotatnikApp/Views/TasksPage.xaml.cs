@@ -37,7 +37,7 @@ namespace NotatnikApp.Views
         {
             try
             {
-                var cb = (Button)sender;
+                var cb = (ImageButton)sender;
             var item = (TaskData)cb.BindingContext;
             var id = item.id;
 

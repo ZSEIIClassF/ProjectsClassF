@@ -63,6 +63,20 @@ namespace NotatnikApp.ViewModels
         }
 
 
+        private string username;
+        public string Username
+        {
+            get
+            {
+                return username;
+            }
+            set
+            {
+                username = value;
+                OnPropertyChanged();
+            }
+        }
+
 
         public Command Logout { get; }
 
@@ -163,11 +177,13 @@ namespace NotatnikApp.ViewModels
         private void GoToNewListPage()
         {
             Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new NewListPage());
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private void GoToList(ListData list)
         {
             Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new TasksPage(list.id));
+            Shell.Current.FlyoutIsPresented = false;
         }
 
 

@@ -104,7 +104,7 @@
 
         <StackLayout BackgroundColor="{DynamicResource blue}">
             <StackLayout Orientation="Horizontal" BackgroundColor="#0D0D0D" Margin="0">
-                <Label Text="HI EFOX" TextColor="White" FontSize="40"  WidthRequest="250" VerticalOptions="CenterAndExpand" Margin="10"/>
+                <Label Text="Your lists" TextColor="White" FontSize="40"  WidthRequest="250" VerticalOptions="CenterAndExpand" Margin="10"/>
                 <Button Text="Add" Command="{Binding newListPage}" WidthRequest="60" HeightRequest="20" HorizontalOptions="End" BackgroundColor="{DynamicResource mediumBlue}" Margin="10"/>
             </StackLayout>
             <CollectionView x:Name="Lists" ItemsSource="{Binding Lists}">

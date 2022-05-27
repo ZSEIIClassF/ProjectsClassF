@@ -1,6 +1,6 @@
-NotatnikApp.Droid.MainActivity, NotatnikApp.Android;crc64d96f1507b51e5d80.MainActivity
-NotatnikApp.Droid.MainActivity;crc64d96f1507b51e5d80.MainActivity
-notatnikapp.droid.MainActivity;crc64d96f1507b51e5d80.MainActivity
+NotatnikApp.Droid.MainActivity, ToDoNotatnik.android;crc64305f45b2f9c893b6.MainActivity
+NotatnikApp.Droid.MainActivity;crc64305f45b2f9c893b6.MainActivity
+notatnikapp.droid.MainActivity;crc64305f45b2f9c893b6.MainActivity
 AndroidX.Activity.IOnBackPressedDispatcherOwner, Xamarin.AndroidX.Activity;androidx.activity.OnBackPressedDispatcherOwner
 AndroidX.Activity.IOnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner
 androidx.activity.OnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner

@@ -16,6 +16,7 @@ namespace NotatnikApp
             InitializeComponent();
 
             BindingContext = viewModel = AppShellViewModel.It;
+            viewModel.OnAppearing();
         }
 
 
@@ -23,7 +24,7 @@ namespace NotatnikApp
         private void Button_Clicked(object sender, EventArgs e)
         {
 
-                var cb = (Button)sender;
+                var cb = (ImageButton)sender;
                 var item = (ListData)cb.BindingContext;
                 var id = item.id;
 

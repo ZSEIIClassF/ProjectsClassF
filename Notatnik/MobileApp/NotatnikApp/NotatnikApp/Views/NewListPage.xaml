@@ -6,7 +6,7 @@
     
     <ContentPage.Content>
         <StackLayout Margin="15">
-            <Entry Placeholder="np. zadania domowe" Text="{Binding Name, Mode=TwoWay}"/>
+            <Entry Placeholder="np. zadania domowe" Text="{Binding Name, Mode=TwoWay}" BackgroundColor="{DynamicResource mediumBlue}"/>
             <Button Text="Add" Command="{Binding addList}" Style="{StaticResource button}"/>
         </StackLayout>
     </ContentPage.Content>

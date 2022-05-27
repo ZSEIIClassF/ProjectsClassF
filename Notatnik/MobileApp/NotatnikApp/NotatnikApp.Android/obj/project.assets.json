@@ -6881,7 +6881,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj",
-      "projectName": "NotatnikApp.Android",
+      "projectName": "ToDoNotatnik.android",
       "projectPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.Android\\NotatnikApp.Android.csproj",
       "packagesPath": "C:\\Users\\eleme\\.nuget\\packages\\",
       "outputPath": "E:\\Coding\\ProjectsClassF-git\\Notatnik\\MobileApp\\NotatnikApp\\NotatnikApp.Android\\obj\\",

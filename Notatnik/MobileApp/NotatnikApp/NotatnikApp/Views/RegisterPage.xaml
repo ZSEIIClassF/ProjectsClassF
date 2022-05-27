@@ -14,6 +14,7 @@
             <Label Text="by pressing Register you accept our privacy and policy" HorizontalOptions="CenterAndExpand"/>
             <Button Text="Register" Command="{Binding Register}" Style="{StaticResource button}"/>
             <Button Text="Login" Command="{Binding Login}" Style="{StaticResource button}"/>
+            <Label Text="{Binding Error}" FontSize="20" HorizontalOptions="CenterAndExpand" TextColor="red"/>
         </StackLayout>
     </ContentPage.Content>
     

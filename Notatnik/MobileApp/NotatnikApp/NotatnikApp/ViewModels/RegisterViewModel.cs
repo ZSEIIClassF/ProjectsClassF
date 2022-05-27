@@ -23,6 +23,20 @@ namespace NotatnikApp.ViewModels
         public Command Login { get; }
 
 
+        private string error;
+        public string Error
+        {
+            get
+            {
+                return error;
+            }
+            set
+            {
+                error = value;
+                OnPropertyChanged();
+            }
+        }
+
         public RegisterViewModel()
         {
             Register = new Command(OnRegister);
@@ -45,7 +59,7 @@ namespace NotatnikApp.ViewModels
                     bool userIsInBase = await UserExist();
                     if (userIsInBase)
                     {
-                        throw new Exception("Already exist");
+                        Error = "user already exist";
                     }
                     else
                     {
@@ -54,14 +68,12 @@ namespace NotatnikApp.ViewModels
                 }
                 else
                 {
-                    throw new Exception("passwords are not the same");
-                    //passwords are not the same
+                    Error = "passwords are not the same";
                 }
             }
             else
             {
-                throw new Exception("password must be 8 lenght");
-                //password must be 8 lenght
+                Error = "password must be 8 lenght";
             }
         }
 

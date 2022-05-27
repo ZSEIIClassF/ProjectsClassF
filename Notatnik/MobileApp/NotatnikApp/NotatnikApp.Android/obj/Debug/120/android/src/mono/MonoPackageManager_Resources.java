@@ -1,8 +1,8 @@
 package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
-		/* We need to ensure that "NotatnikApp.Android.dll" comes first in this list. */
-		"NotatnikApp.Android.dll",
+		/* We need to ensure that "ToDoNotatnik.android.dll" comes first in this list. */
+		"ToDoNotatnik.android.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.Bson.dll",
 		"Newtonsoft.Json.dll",
