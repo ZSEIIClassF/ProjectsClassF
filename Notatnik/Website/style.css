@@ -432,6 +432,10 @@ section {
     transition: 0.2s;
 }
 
+.task>i.hide {
+    display: none;
+}
+
 
 input::after {
     background: var(--black);
