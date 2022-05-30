@@ -44,14 +44,18 @@
                 <h1>Notatnik</h1>
             </a>
         </div>
+        
         <a href="login.php"><img src="../img/login.png" alt="Login" title="Logowanie/Rejestracja"></a>
+        <a class="loggedLink" href="logout.php" title="Wyloguj się">Wyloguj</a>
     </header>
     
     <!-- tylko do testow -->
-    <a class="loggedLink" href="logout.php" title="Wyloguj się">Wyloguj się!</a>
-    <?php
-        echo "<span class='logged '>Witaj ".ucfirst($_SESSION['user']).'!</span>';
-    ?>
+    <div class="Hi">
+        <?php
+            echo "<span class='logged '>Witaj ".ucfirst($_SESSION['user']).'!</span>';
+        ?>
+        <hr class="hiLines">
+    </div>
     
     <section>    
 
