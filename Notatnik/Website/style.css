@@ -218,6 +218,7 @@ header>a>img:hover {
     font-size: 25px;
     font-weight: 600;
     margin-block: 10px;
+    color: var(--black);
 }
 
 .hiLines
@@ -274,12 +275,6 @@ footer>a:last-child {
 footer>a:last-child:hover{
     text-decoration: underline;
 }
-
-
-
-
-
-
 
 
 
