@@ -72,11 +72,10 @@
             global $db_password;
             global $db_name;
             $conn = new PDO("mysql:host=$host;dbname=$db_name", $db_user, $db_password);
-            $stmt = $conn->prepare("INSERT INTO $table($columns) VALUES ('$what', $iduser)");
+            $stmt = $conn->prepare("INSERT INTO $table($columns) VALUES $what");
             $stmt->execute();
-            $result = $stmt->fetch();
+            $result = $stmt->fetchAll();
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return true;
         }
         catch (PDOException $e)
         {
