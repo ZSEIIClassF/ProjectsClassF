@@ -112,9 +112,9 @@ function generate_tasks(names, id)
     res = "";
 
     res +=          '<div class="task">';
+    res +=                '<i class="fa-solid fa-trash hide" onclick="delete_task('+id+');"></i>';
     res +=                '<input type="checkbox">';
     res +=                '<p>'+ name +'</p>';
-    res +=                '<i class="fa-solid fa-trash" onclick="delete_task('+id+');"></i>';
     res +=          '</div>';
 
     return res;
@@ -127,9 +127,10 @@ function generate_lists(names, ids)
 
     res +=      '<div class="list">';
     res +=            '<div>';
-    res +=                '<i class="fas fa-pencil-alt fa-xl"></i>';
+    res +=                '<i class="fas fa-pencil-alt fa-xl" onclick="edit_list('+ids+')"></i>';
     res +=                '<h2 id="title">'+ name +'</h2>';
     res +=                '<i class="fa-solid fa-plus fa-xl" onclick="add_task('+ids+');"></i>';
+    res +=                '<i class="fa-solid fa-trash hide" onclick="delete_List(this);"></i>';
     res +=            '</div>';
     res +=            '<br/>';
     res +=         '<div  id='+ ids +'>'
@@ -302,6 +303,39 @@ function submit_form()
     xhttp.send();
 
 }
+
+
+
+function edit_list(List_id)
+{
+    var tasksContainer = document.getElementById(List_id);
+    var tasks = tasksContainer.children;
+    var button = tasksContainer.parentElement.firstChild.lastChild;
+    console.log(button);
+    
+
+    for (const current of tasks) {
+        var trash = current.firstChild;
+        var checkbox = current.children[1];
+        
+        if(trash.classList.contains('hide'))
+        {
+            trash.classList.remove('hide');
+            checkbox.classList.add('hide');
+        }
+        else
+        {
+            checkbox.classList.remove('hide');
+            trash.classList.add('hide');
+        }
+    }
+
+}
+
+
+
+
+
 
 load_tasks();
 </script>
