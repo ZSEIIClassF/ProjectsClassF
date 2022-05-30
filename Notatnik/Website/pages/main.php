@@ -177,18 +177,19 @@ function load_only_tasks()
             for(i=0; i<idLists.length; i++){
                 for(j=0; j<idOfLists.length; j++){
                     if(idLists[i]==idOfLists[j]){
-                            result += generate_tasks(nameTasks[j], idTasks[i]);
-                            document.getElementById(idLists[i]).innerHTML = result;
-                        }
-                        else{
-                            continue;
-                        }
+                        result += generate_tasks(nameTasks[j], idTasks[j]);
+                        document.getElementById(idLists[i]).innerHTML = result;
+                    }
+                    else{
+                        continue;
+                    }
                 }
                 result = "";
             }
 
             // console.log(nameTasks);
             // console.log(idOfLists);
+            // console.log(objectsTasks);
             // console.log(namesTask);
             // console.log(idOfList);
         }
@@ -251,7 +252,18 @@ function load_tasks()
 
 function delete_task(id)
 {
-    alert('remove '+id);
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() 
+    {
+        if (this.readyState == 4 && this.status == 204)
+        {
+            document.location.reload();
+        }
+    }
+    xhttp.open("DELETE", "apiTasks.php", true);
+    xhttp.setRequestHeader("auth-key", "ProgramingIsSooGreat");
+    xhttp.setRequestHeader("id", id);
+    xhttp.send();
 }
 
 function add_new_task(id)
