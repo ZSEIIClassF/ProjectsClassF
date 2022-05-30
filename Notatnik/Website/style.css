@@ -426,7 +426,7 @@ section {
 
     border-left: 1px solid #424242;
 
-    transition: background 0.2s;
+    transition: 0.2s;
 }
 
 
@@ -444,7 +444,7 @@ input::after {
 
     display: inline-block;
 
-    transition: background 0.15s, border-color 0.15s;
+    transition: 0.15s, border-color 0.15s;
 }
 
 
