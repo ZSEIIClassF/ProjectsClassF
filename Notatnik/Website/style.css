@@ -214,6 +214,7 @@ header>a>img:hover {
 .logged
 {
     font-size: 25px;
+    font-weight: 600;
     margin-block: 10px;
 }
 
