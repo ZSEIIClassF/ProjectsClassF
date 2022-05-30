@@ -111,7 +111,7 @@ function generate_tasks(names, id, done)
 
     res +=          '<div class="task">';
     res +=                '<i class="fa-solid fa-trash hide" onclick="delete_task('+id+');"></i>';
-    res +=                '<input type="checkbox" '+done+'>';
+    res +=                '<input type="checkbox" id="'+id+'" '+done+' onclick="is_checked('+id+');">';
     res +=                '<p>'+ name +'</p>';
     res +=          '</div>';
 
@@ -141,13 +141,13 @@ function generate_lists(names, ids)
 nameTasks = [];
 idOfLists = [];
 idTasks = [];
-isCheck = [];
+isDone = [];
 function prepare_task_html(todo)
 {
     nameTasks.push(todo.name);
     idOfLists.push(todo.listId);
     idTasks.push(todo.id);
-
+    isDone.push(todo.done);
 }
 
 function load_only_tasks()
@@ -170,16 +170,14 @@ function load_only_tasks()
             // idOfLists = [];  -> tablica z id list z taskow
             // idLists = [];    -> tablica z id list z lists
             // nameLists = [];  -> tablica z nazwami list
-            console.log(idTasks);
             var idTask = JSON.stringify(idTasks);
-            console.log(idTask);
 
             var result = "";
             for(i=0; i<idLists.length; i++){
                 for(j=0; j<idOfLists.length; j++){
                     if(idLists[i]==idOfLists[j]){
                         var done = "";
-                        if(isdone[j]==true) done = "checked";
+                        if(isDone[j]==true) done = "checked";
                         result += generate_tasks(nameTasks[j], idTasks[j], done);
                         document.getElementById(idLists[i]).innerHTML = result;
                     }
@@ -242,7 +240,6 @@ function load_tasks()
             // console.log("-----------tasks----------");
 
             load_only_tasks();
-            is_checed();
         }
     };
 
@@ -254,9 +251,26 @@ function load_tasks()
     result = xhttp.response;
 }
 
-function is_checed()
+function is_checked(id)
 {
-
+    box = document.getElementById(id);
+    done = 0;
+    if(box.checked==true) done = 1; else done = 0;
+    if(done==1 || done == 0){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200)
+            {
+                // document.location.reload();
+            }
+        }
+        xhttp.open("PATCH", "apiTasks.php", true);
+        xhttp.setRequestHeader("auth-key", "ProgramingIsSooGreat");
+        xhttp.setRequestHeader("id", id);
+        xhttp.setRequestHeader("status", done);
+        xhttp.send();
+    }
 }
 
 function delete_task(id)

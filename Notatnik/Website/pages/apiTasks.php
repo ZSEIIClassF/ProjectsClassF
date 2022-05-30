@@ -106,22 +106,17 @@ else if($_SERVER["REQUEST_METHOD"] == "PUT" || $_SERVER["REQUEST_METHOD"] == "PA
             $result = single_select("*", "tasks", "id=".$_SERVER["HTTP_ID"]);
             if($result != [])
             {
-                if((isset($_SERVER["HTTP_TEXT"]) && $_SERVER["HTTP_TEXT"] != "") || (isset($_SERVER["HTTP_STATUS"]) /*&& in_array($_SERVER["HTTP_STATUS"] ,[1,2,3, "1", "2", "3"])*/)) 
+                if((isset($_SERVER["HTTP_STATUS"]) /*&& in_array($_SERVER["HTTP_STATUS"] ,[1,2,3, "1", "2", "3"])*/)) 
                 {
-                    $new_text = "";
-                    if(isset($_SERVER["HTTP_TEXT"]) && $_SERVER["HTTP_TEXT"] != "") $new_text = $_SERVER["HTTP_TEXT"];
-                    $status = "";  
+                    $update = "";
                     if(isset($_SERVER["HTTP_STATUS"]) && in_array($_SERVER["HTTP_STATUS"] ,[0,1, "0", "1"])) $status = $_SERVER["HTTP_STATUS"];
-                    $update_string = "";
-                    if($new_text != "") $update_string .= "name='".$new_text."'";
                     if($status != "")
                     {
-                        if($update_string != "") $update_string .=", ";
-                        $update_string .= "done='".$status."'";
+                        $update .= "done='".$status."'";
                     }
-                    if($update_string != "")
+                    if($update != "")
                     {
-                        if(update($update_string, "tasks", "id=".$_SERVER["HTTP_ID"].""))
+                        if(update("done=".$status."", "tasks", "id=".$_SERVER["HTTP_ID"].""))
                         {
                             http_response_code(200);
                             echo "Item updated successfully";
