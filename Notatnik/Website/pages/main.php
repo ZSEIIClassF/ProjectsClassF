@@ -285,6 +285,22 @@ function add_new_task(id)
 
 }
 
+function delete_list(id)
+{
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() 
+    {
+        if (this.readyState == 4 && this.status == 204)
+        {
+            document.location.reload();
+        }
+    }
+    xhttp.open("DELETE", "api.php", true);
+    xhttp.setRequestHeader("auth-key", "ProgramingIsGreat");
+    xhttp.setRequestHeader("id", id);
+    xhttp.send();
+}
+
 function submit_form()
 {
     var title = document.getElementsByName('nameListNew').item(0).value;
