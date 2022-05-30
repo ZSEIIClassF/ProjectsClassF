@@ -3,7 +3,7 @@
 
     if(isset($_SESSION['zalogowany']) && ($_SESSION['zalogowany']==true))
     {
-        header('Location: main.php');
+        header('Location: pages/main.php');
         exit();
     }
 ?>

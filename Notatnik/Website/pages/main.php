@@ -283,7 +283,7 @@ function delete_task(id)
             document.location.reload();
         }
     }
-    xhttp.open("DELETE", "apiTasks.php", true);
+    xhttp.open("DELETE", "apiTasks.php", true); // zmiana z DELETE
     xhttp.setRequestHeader("auth-key", "ProgramingIsSooGreat");
     xhttp.setRequestHeader("id", id);
     xhttp.send();
@@ -381,11 +381,6 @@ function edit_list(List_id)
     }
 
 }
-
-
-
-
-
 
 load_tasks();
 </script>
