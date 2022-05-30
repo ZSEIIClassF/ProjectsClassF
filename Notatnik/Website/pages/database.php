@@ -1,5 +1,5 @@
 <?php
-
+// Author Szymon Skrzypek
     require_once('connect.php');
 
     function decoder($value)

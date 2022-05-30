@@ -1,5 +1,5 @@
 <?php
-
+// Author Szymon Skrzypek
 session_start();
 
 function check_auth()

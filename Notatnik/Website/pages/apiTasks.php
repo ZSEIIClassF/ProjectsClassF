@@ -1,4 +1,5 @@
 <?php
+// Author Szymon Skrzypek
 
 session_start();
 
