@@ -176,6 +176,8 @@ header>a:last-child {
     float: right;
     margin-right: 25px;
     font-weight: bold;
+    text-decoration: none;
+    color: var(--white)
  }
 
 
