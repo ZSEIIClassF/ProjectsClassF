@@ -6,7 +6,7 @@ function check_auth()
 {
     if(isset($_SERVER["HTTP_AUTH_KEY"]))
     {
-        if($_SERVER["HTTP_AUTH_KEY"] == "ProgramingIsGreat")
+        if($_SERVER["HTTP_AUTH_KEY"] == "ProgramingIsSooGreat")
         {
             return true;
         }
@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
         require("database.php");
         if(isset($_SERVER["HTTP_ID"]))
         {
-            $result = single_select("name", "lists", "id=".$_SERVER["HTTP_ID"]);
+            $result = single_select("name", "tasks", "id=".$_SERVER["HTTP_ID"]);
             if($result != [])
             {
                 http_response_code(200);
@@ -45,12 +45,13 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
                 echo "No item with id equal ".$_SERVER["HTTP_ID"];
             }
         }
-        else if(isset($_SERVER["HTTP_FULL_LIST"]) && $_SERVER["HTTP_FULL_LIST"] == "true")
+        else if(isset($_SERVER["HTTP_FULL_LIST"]) && $_SERVER["HTTP_FULL_LIST"] == "true" && isset($_SERVER['HTTP_STATUS']))
         {
-            $userid = $_SESSION['id'];
-            if(!isset($_SESSION['id'])) $userid = 23;
-            $result = select("*", "lists", "userId=".$userid);    
-            if($result != [])
+            // listid z xhttp.setRequestHeader("status", ids); -> ids tablica idLists
+            $listidstr = $_SERVER['HTTP_STATUS'];
+            $listidint = array_map('intval', json_decode($listidstr, true));
+            $result = select("*", "tasks", "listId IN (".implode(', ', $listidint).")");    
+            if($result != []) 
             {
                 http_response_code(200);
                 header('Content-type: application/json');
@@ -75,9 +76,9 @@ else if($_SERVER["REQUEST_METHOD"] == "POST"){
         require("database.php");
         if(isset($_SERVER["HTTP_TEXT"]) && $_SERVER["HTTP_TEXT"] != "" )
         {
-            $status = 1;  
-            if(isset($_SERVER["HTTP_STATUS"]) /*&& in_array($_SERVER["HTTP_STATUS"] ,[1,2,3, "1", "2", "3"])*/) $status = $_SERVER["HTTP_STATUS"];
-            if(insert("name, userId", "lists", "".$_SERVER["HTTP_TEXT"]."", "".$status.""))
+            $status = 0;  
+            if(isset($_SERVER["HTTP_STATUS"]) && in_array($_SERVER["HTTP_STATUS"] ,[0,1, "0", "1"])) $status = $_SERVER["HTTP_STATUS"];
+            if(insert("name, done", "tasks", "".$_SERVER["HTTP_TEXT"]."", "".$status.""))   // TUTAJ BEDZIE TRZEBA DOPISAC listid
             {
                 http_response_code(201);
                 echo "Item has been added to list";
@@ -102,7 +103,7 @@ else if($_SERVER["REQUEST_METHOD"] == "PUT" || $_SERVER["REQUEST_METHOD"] == "PA
         require("database.php");
         if(isset($_SERVER["HTTP_ID"]))
         {
-            $result = single_select("*", "lists", "id=".$_SERVER["HTTP_ID"]);
+            $result = single_select("*", "tasks", "id=".$_SERVER["HTTP_ID"]);
             if($result != [])
             {
                 if((isset($_SERVER["HTTP_TEXT"]) && $_SERVER["HTTP_TEXT"] != "") || (isset($_SERVER["HTTP_STATUS"]) /*&& in_array($_SERVER["HTTP_STATUS"] ,[1,2,3, "1", "2", "3"])*/)) 
@@ -110,17 +111,17 @@ else if($_SERVER["REQUEST_METHOD"] == "PUT" || $_SERVER["REQUEST_METHOD"] == "PA
                     $new_text = "";
                     if(isset($_SERVER["HTTP_TEXT"]) && $_SERVER["HTTP_TEXT"] != "") $new_text = $_SERVER["HTTP_TEXT"];
                     $status = "";  
-                    if(isset($_SERVER["HTTP_STATUS"]) /*&& in_array($_SERVER["HTTP_STATUS"] ,[1,2,3, "1", "2", "3"])*/) $status = $_SERVER["HTTP_STATUS"];
+                    if(isset($_SERVER["HTTP_STATUS"]) && in_array($_SERVER["HTTP_STATUS"] ,[0,1, "0", "1"])) $status = $_SERVER["HTTP_STATUS"];
                     $update_string = "";
                     if($new_text != "") $update_string .= "name='".$new_text."'";
                     if($status != "")
                     {
                         if($update_string != "") $update_string .=", ";
-                        $update_string .= "userId='".$status."'";
+                        $update_string .= "done='".$status."'";
                     }
                     if($update_string != "")
                     {
-                        if(update($update_string, "lists", "id=".$_SERVER["HTTP_ID"].""))
+                        if(update($update_string, "tasks", "id=".$_SERVER["HTTP_ID"].""))
                         {
                             http_response_code(200);
                             echo "Item updated successfully";
@@ -162,10 +163,10 @@ else if($_SERVER["REQUEST_METHOD"] == "DELETE"){
         require("database.php");
         if(isset($_SERVER["HTTP_ID"]))
         {
-            $result = single_select("*", "lists", "id=".$_SERVER["HTTP_ID"]."");
+            $result = single_select("*", "tasks", "id=".$_SERVER["HTTP_ID"]."");
             if($result != [])
             {
-                if(delete("lists", "id LIKE ".$_SERVER["HTTP_ID"].""))
+                if(delete("tasks", "id LIKE ".$_SERVER["HTTP_ID"].""))
                 {
                     http_response_code(204);
                     echo "Item has been deleted successfully";

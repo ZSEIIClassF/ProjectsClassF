@@ -204,7 +204,8 @@ if (isset($_POST['email']))
 
     </form>
 
-    <footer><a href="info.html"><img src="../img/info.png" alt="Info" title="Info"></a> Projects Class F &copy; </footer>
+    <footer><a href="info.html"><img src="../img/info.png" alt="Info" title="Info"></a> </a> 
+        <a href="https://projectsclassf.pl/" title="Autorzy" target="_blank">&copy; Szymon Skrzypek, Jan Walicki</a></footer>
 
 </body>
 
