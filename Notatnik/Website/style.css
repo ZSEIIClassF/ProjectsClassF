@@ -300,9 +300,9 @@ section {
     padding: 25px;
 
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* gap: 80px; */
-    /* flex-direction: row; */
+    flex-direction: row;
     justify-content: center;
 
     box-shadow: 0px 10px 10px #1F1F1F;
@@ -368,6 +368,10 @@ section {
 .list>div>i {
     margin-top: 15px;
     color: var(--grey);
+}
+
+.list>div>i.hide {
+    display: none;
 }
 
 .list>div>i:hover {
@@ -552,7 +556,7 @@ input[type="text"]:focus {
 
 
 
-form>div>input[type="submit"] {
+form>div>input[type="submit"], button {
 
     background: none;
     display: block;

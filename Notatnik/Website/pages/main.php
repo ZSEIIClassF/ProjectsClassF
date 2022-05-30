@@ -92,10 +92,8 @@ function add_list()
     res = "";
 
     res +=      '<div class="list">';
-    res +=            '<div>';
-    res +=                '<i class="fas fa-pencil-alt fa-xl"></i>';
+    res +=            '<div>';    
     res +=                '<input type="text" name="nameListNew" placeholder="Nazwa listy">';
-    res +=                '<i class="fa-solid fa-plus fa-xl";"></i>';
     res +=            '</div>';
     res +=            '<br/>';
     res +=           '<div class="task">';
@@ -130,7 +128,7 @@ function generate_lists(names, ids)
     res +=                '<i class="fas fa-pencil-alt fa-xl" onclick="edit_list('+ids+')"></i>';
     res +=                '<h2 id="title">'+ name +'</h2>';
     res +=                '<i class="fa-solid fa-plus fa-xl" onclick="add_task('+ids+');"></i>';
-    res +=                '<i class="fa-solid fa-trash hide" onclick="delete_List(this);"></i>';
+    res +=                '<i class="fa-solid fa-trash hide" onclick="delete_list('+ids+');"></i>';
     res +=            '</div>';
     res +=            '<br/>';
     res +=         '<div  id='+ ids +'>'
@@ -326,8 +324,20 @@ function edit_list(List_id)
 {
     var tasksContainer = document.getElementById(List_id);
     var tasks = tasksContainer.children;
-    var button = tasksContainer.parentElement.firstChild.lastChild;
-    console.log(button);
+    var listTrash = tasksContainer.parentElement.firstChild.lastChild;
+    var listAdd = tasksContainer.parentElement.firstChild.children[2];
+    
+    if(listTrash.classList.contains('hide'))
+    {
+        listTrash.classList.remove('hide');
+        listAdd.classList.add('hide');
+    }
+    else
+    {
+        listAdd.classList.remove('hide');
+        listTrash.classList.add('hide');
+    }
+    
     
 
     for (const current of tasks) {
