@@ -104,14 +104,14 @@ function add_list()
     document.getElementById("column1").innerHTML = res;
 }
 
-function generate_tasks(names, id)
+function generate_tasks(names, id, done)
 {
     name = names.charAt(0).toUpperCase() + names.slice(1);
     res = "";
 
     res +=          '<div class="task">';
     res +=                '<i class="fa-solid fa-trash hide" onclick="delete_task('+id+');"></i>';
-    res +=                '<input type="checkbox">';
+    res +=                '<input type="checkbox" '+done+'>';
     res +=                '<p>'+ name +'</p>';
     res +=          '</div>';
 
@@ -141,11 +141,13 @@ function generate_lists(names, ids)
 nameTasks = [];
 idOfLists = [];
 idTasks = [];
+isCheck = [];
 function prepare_task_html(todo)
 {
     nameTasks.push(todo.name);
     idOfLists.push(todo.listId);
     idTasks.push(todo.id);
+
 }
 
 function load_only_tasks()
@@ -176,7 +178,9 @@ function load_only_tasks()
             for(i=0; i<idLists.length; i++){
                 for(j=0; j<idOfLists.length; j++){
                     if(idLists[i]==idOfLists[j]){
-                        result += generate_tasks(nameTasks[j], idTasks[j]);
+                        var done = "";
+                        if(isdone[j]==true) done = "checked";
+                        result += generate_tasks(nameTasks[j], idTasks[j], done);
                         document.getElementById(idLists[i]).innerHTML = result;
                     }
                     else{
@@ -238,6 +242,7 @@ function load_tasks()
             // console.log("-----------tasks----------");
 
             load_only_tasks();
+            is_checed();
         }
     };
 
@@ -247,6 +252,11 @@ function load_tasks()
     xhttp.setRequestHeader("full-list", "true");
     xhttp.send();
     result = xhttp.response;
+}
+
+function is_checed()
+{
+
 }
 
 function delete_task(id)
