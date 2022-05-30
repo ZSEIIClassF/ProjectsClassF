@@ -47,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
         }
         else if(isset($_SERVER["HTTP_FULL_LIST"]) && $_SERVER["HTTP_FULL_LIST"] == "true" && isset($_SERVER['HTTP_STATUS']))
         {
-            // listid z xhttp.setRequestHeader("status", ids); -> ids tablica idLists
+            // listid z xhttp.setRequestHeader("status", ids); -> ids tablica idLists  = do wyswietlania
             $listidstr = $_SERVER['HTTP_STATUS'];
             $listidint = array_map('intval', json_decode($listidstr, true));
             $result = select("*", "tasks", "listId IN (".implode(', ', $listidint).")");    
@@ -76,9 +76,9 @@ else if($_SERVER["REQUEST_METHOD"] == "POST"){
         require("database.php");
         if(isset($_SERVER["HTTP_TEXT"]) && $_SERVER["HTTP_TEXT"] != "" )
         {
-            $status = 0;  
-            if(isset($_SERVER["HTTP_STATUS"]) && in_array($_SERVER["HTTP_STATUS"] ,[0,1, "0", "1"])) $status = $_SERVER["HTTP_STATUS"];
-            if(insert("name, done", "tasks", "".$_SERVER["HTTP_TEXT"]."", "".$status.""))   // TUTAJ BEDZIE TRZEBA DOPISAC listid
+            $status = $_SERVER['HTTP_STATUS'];  
+            // if(isset($_SERVER["HTTP_STATUS"]) && in_array($_SERVER["HTTP_STATUS"] ,[0,1, "0", "1"])) $status = $_SERVER["HTTP_STATUS"];
+            if(insert("name, listId", "tasks", "".$_SERVER["HTTP_TEXT"]."", "".$status.""))   // TUTAJ BEDZIE TRZEBA DOPISAC listid
             {
                 http_response_code(201);
                 echo "Item has been added to list";

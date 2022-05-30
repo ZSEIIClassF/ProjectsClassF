@@ -75,7 +75,7 @@ else if($_SERVER["REQUEST_METHOD"] == "POST"){
         require("database.php");
         if(isset($_SERVER["HTTP_TEXT"]) && $_SERVER["HTTP_TEXT"] != "" )
         {
-            $status = 1;  
+            $status = $_SESSION['id'];
             if(isset($_SERVER["HTTP_STATUS"]) /*&& in_array($_SERVER["HTTP_STATUS"] ,[1,2,3, "1", "2", "3"])*/) $status = $_SERVER["HTTP_STATUS"];
             if(insert("name, userId", "lists", "".$_SERVER["HTTP_TEXT"]."", "".$status.""))
             {

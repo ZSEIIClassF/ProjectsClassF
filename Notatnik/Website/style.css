@@ -20,21 +20,15 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+
 }
 
-*::-webkit-scrollbar { 
-    display: none;
-}
 
 body {
     background-image: url(img/bg.png);
     background-color: var(--blue);
     background-attachment: fixed;
 }
-
-
 
 
 /* --- LINKS --- */
@@ -167,11 +161,6 @@ header>div>a>h1 {
     display: inline-block;
 }
 
-header>a:last-child {
-   float: right;
-   margin-right: 25px;
-   font-weight: bold;
-}
 
 header>a>img {
     width: 30px;
@@ -184,7 +173,6 @@ header>a>img {
     transition-duration: 1s;
 }
 
-
 header>a>img:hover {
     cursor: pointer;
 
@@ -195,29 +183,8 @@ header>a>img:hover {
 
 
 
-/* HI USER */
 
 
-.Hi
-{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-
-.logged
-{
-    font-size: 25px;
-    margin-block: 10px;
-}
-
-.hiLines
-{
-    border: 1px dashed var(--black);
-    width: 100%;
-}
 
 
 /* --- FOOTER ---*/
@@ -265,6 +232,7 @@ footer>a:last-child {
 footer>a:last-child:hover{
     text-decoration: underline;
 }
+
 
 
 
@@ -419,7 +387,7 @@ section {
 
     border-left: 1px solid #424242;
 
-    transition:  0.2s;
+    transition: background 0.2s;
 }
 
 
@@ -437,7 +405,7 @@ input::after {
 
     display: inline-block;
 
-    transition: 0.15s, border-color 0.15s;
+    transition: background 0.15s, border-color 0.15s;
 }
 
 
