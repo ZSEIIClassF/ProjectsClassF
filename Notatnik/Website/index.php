@@ -1,3 +1,7 @@
+<!-- Authors -->
+<!-- Szymon Skrzpek -->
+<!-- Jan Walicki -->
+
 <?php
     session_start();
 
@@ -22,7 +26,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <meta name="description"
-        content="Internetowy notatnik w bardzo prostu sposób może pomóc w organizacji twojego czasu. Jest on dostępny na wielu platformach. Prosta w użyciu, użyteczna oraz z nowoczesnym designem witryna rozwiąże twoje problemy z brakiem wolengo czasu. Ciekawym atutem jest to, że powiadomienia związane z ukończeniem zadania na czas, są wysyłane mailowo lub na twój numer telefonu.">
+        content="Internetowy notatnik w bardzo prostu sposób może pomóc w organizacji twojego czasu. 
+        Jest on dostępny na wielu platformach. Prosta w użyciu, użyteczna oraz z nowoczesnym designem witryna rozwiąże 
+        twoje problemy z brakiem wolengo czasu. Ciekawym atutem jest to, że powiadomienia związane 
+        z ukończeniem zadania na czas, są wysyłane mailowo lub na twój numer telefonu.">
+    <meta name="keywords" content="notatnik, zadania, organizacja czasu, brak wolengo czasu">
 
 
 

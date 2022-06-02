@@ -265,7 +265,7 @@ function is_checked(id)
                 // document.location.reload();
             }
         }
-        xhttp.open("PATCH", "apiTasks.php", true);
+        xhttp.open("PUT", "apiTasks.php", true);
         xhttp.setRequestHeader("auth-key", "ProgramingIsSooGreat");
         xhttp.setRequestHeader("id", id);
         xhttp.setRequestHeader("status", done);
